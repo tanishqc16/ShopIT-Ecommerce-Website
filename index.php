@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="cart.css" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +11,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+   
     <title>Shop.IT</title>
 
 </head>
+<section>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
@@ -22,7 +26,7 @@
           <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#collections">Collections</a>
@@ -31,16 +35,35 @@
                 <a class="nav-link active" aria-current="page" href="#popular">Popular</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/cart.html">Cart</a>
+                <a class="nav-link active" aria-current="page" href="login_form.php">Login</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#login">Login</a>
-              </li>
+              <i class="bx bx-shopping-bag" id="cart-icon"></i>
             </ul>
           </div>
         </div>
       </nav>
           <!-- Navbar ends-->
+      <!-- Cart start-->
+       <div class="cart">
+         <h2 class="cart-title">Your Cart</h2>
+          <!-- cart content -->
+          <div class="cart-content">
+
+          </div>
+
+          <!-- total -->
+         <div class="total">
+            <div class="total-title">Total : </div>
+            <div class="total-price"> ₹ 0</div>
+         </div>
+         <!-- buy button -->
+         <button type="button" class="btn-buy">Buy Now</button>
+         <!-- cart close -->
+         <i class="bx bx-x" id="close-cart"></i>
+       </div>
+
+      <!-- Cart ends -->
+
     <!-- Welcome screen -->
     <div class="intro_area">
         <div>
@@ -67,29 +90,32 @@
 
   <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
     <div class = "text-center">
-      <img src = "./images/iphone 14 pro purple.jfif" class = "w-100">
-      <p class = "text-capitalize my-1">Apple iPhone 14 Pro 1TB Deep Purple</p>
+      <img src = "./images/iphone 14 pro purple.jfif" class = "w-100 product-img">
+      <p class = "text-capitalize my-1">Apple iPhone 14 Pro</p>
       <br>  
-      <span class = "fw-bold">₹1,79,900.00</span>
+      <span class = "fw-bold product-price">₹179900.00</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
     </div>
   </div>
 
   
   <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
     <div class = "text-center">
-      <img src = "./images/lenovo laptop.jpg" class = "w-100">
-      <p class = "text-capitalize my-1">Lenovo IdeaPad Slim 3 Intel Core i5 12th Gen 15.6", 82RK0062IN</p>
+      <img src = "./images/lenovo laptop.jpg" class = "w-100 product-img">
+      <p class = "text-capitalize my-1">Lenovo IdeaPad Slim 3</p>
       <br>  
-      <span class = "fw-bold">₹57,490.00</span>
+      <span class = "fw-bold product-price">₹57490.00</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
     </div>
   </div>
 
   <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
     <div class = "text-center">
-      <img src = "./images/woodland shoes.jpg" class = "w-100">
-      <p class = "text-capitalize my-1">Woodland Mens G 40777cma Sneaker</p>
+      <img src = "./images/woodland shoes.jpg" class = "w-100 product-img">
+      <p class = "text-capitalize my-1">Woodland Mens Sneaker</p>
       <br>  
-      <span class = "fw-bold">₹2,726.00</span>
+      <span class = "fw-bold product-price">₹2726.00</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
       <div>
       </div>
     </div>
@@ -97,47 +123,56 @@
 
   <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
     <div class = "text-center">
-      <img src = "./images/boat eardopes.jpg" class = "w-100">
-      <p class = "text-capitalize my-1">boAt Airdopes 121v2 in-Ear True Wireless Earbuds with Upto 14 Hours Playback</p>
+      <img src = "./images/boat eardopes.jpg" class = "w-100 product-img">
+      <p class = "text-capitalize my-1">boAt Airdopes</p>
       <br>  
-      <span class = "fw-bold">₹1,199.00</span>
+      <span class = "fw-bold product-price">₹1199.00</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
+
     </div>
   </div>
   
   <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
     <div class = "text-center">
-      <img src = "./images/nike shoes.jpeg" class = "w-100">
-      <p class = "text-capitalize my-1">Nike Men's Shoes Air Max 90 Worldwide Pack Black CK6474-001</p>
+      <img src = "./images/nike shoes.jpeg" class = "w-100 product-img">
+      <p class = "text-capitalize my-1">Nike Men's Shoes Air Max</p>
       <br>  
-      <span class = "fw-bold">₹58,424..00</span>
+      <span class = "fw-bold product-price">₹58424.00</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
+
     </div>
   </div>
 
   <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
     <div class = "text-center">
-      <img src = "./images/keyboard and mouse.jpg" class = "w-100">
-      <p class = "text-capitalize my-1">MageGee Gaming Keyboard and Mouse Combo, K1 LED Rainbow Backlit Keyboard</p>
+      <img src = "./images/keyboard and mouse.jpg" class = "w-100 product-img">
+      <p class = "text-capitalize my-1">MageGee Gaming Keyboard and Mouse Combo</p>
       <br>  
-      <span class = "fw-bold">₹6,598.00</span>
+      <span class = "fw-bold product-price">₹6598.00</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
+
     </div>
   </div>
 
   <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
     <div class = "text-center">
-      <img src = "./images/moniter.jpg" class = "w-100">
-      <p class = "text-capitalize my-1">Acer Nitro Vg270 S 27 Inch (68.58 cm) Led 1920 x 1080 Pixels Full Hd IPS Gaming Monitor</p>
+      <img src = "./images/moniter.jpg" class = "w-100 product-img">
+      <p class = "text-capitalize my-1">Acer Nitro</p>
       <br>  
-      <span class = "fw-bold">₹16,499.00</span>
+      <span class = "fw-bold product-price">₹16499.00</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
+
     </div>
   </div>
 
   <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
     <div class = "text-center">
-      <img src = "./images/oneplus mobile.jpg" class = "w-100">
-      <p class = "text-capitalize my-1">OnePlus Nord 2T 5G (Gray Shadow, 8GB RAM, 128GB Storage)
-      </p>
+      <img src = "./images/oneplus mobile.jpg" class = "w-100 product-img">
+      <p class = "text-capitalize my-1">OnePlus Nord</p>
       <br>  
-      <span class = "fw-bold">₹28,999..00</span>
+      <span class = "fw-bold product-price">₹28999..00</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
+
     </div>
   </div>
   
@@ -153,46 +188,54 @@
 
     <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
       <div class = "text-center">
-        <img src = "./images/boat_smartwatch.jpg" class = "w-100">
-        <p class = "text-capitalize my-1">boAt Xtend Smartwatch with Alexa Built-in, 1.69” HD Display</p>
+        <img src = "./images/boat_smartwatch.jpg" class = "w-100 product-img">
+        <p class = "text-capitalize my-1">boAt Xtend Smartwatch</p>
         <br>  
-        <span class = "fw-bold">Deal of the Day:  ₹2,659.00 </span>
+        <span class = "fw-bold product-price">₹2659.00 </span>
         <br>
         <span class = "fw">You Save:	₹5,331.00 (67%)</span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+
       </div>
     </div>
 
     
     <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
       <div class = "text-center">
-        <img src = "./images/iphone_13_pro.jpg" class = "w-100">
-        <p class = "text-capitalize my-1">Apple iPhone 13 Pro (1TB) - Graphite</p>
+        <img src = "./images/iphone_13_pro.jpg" class = "w-100 product-img">
+        <p class = "text-capitalize my-1">Apple iPhone 13 Pro</p>
         <br>  
-        <span class = "fw-bold">Deal of the Day:	₹1,54,900.00</span>
+        <span class = "fw-bold product-price">₹154900.00</span>
         <br>
-        <span class = "fw">You Save:	₹15,000.00 (9%) </span>
+        <span class = "fw">You Save:	₹15,000 (9%) </span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+
       </div>
     </div>
 
     <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
       <div class = "text-center">
-        <img src = "./images/Adidas.jpg" class = "w-100">
-        <p class = "text-capitalize my-1">Adidas Men's Yking 2.0 Running Shoes</p>
+        <img src = "./images/Adidas.jpg" class = "w-100 product-img">
+        <p class = "text-capitalize my-1">Adidas Men's Yking</p>
         <br>  
-        <span class = "fw-bold">Deal of the Day: ₹2,210.00 </span>
+        <span class = "fw-bold product-price">₹2210.00 </span>
         <br>
         <span class = "fw">You Save:	₹390.00 (17%)</span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+
       </div>
     </div>
 
     <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
       <div class = "text-center">
-        <img src = "./images/Canon.jpg" class = "w-100">
-        <p class = "text-capitalize my-1">Canon EOS 200D II 24.1MP Digital SLR Camera + EF-S 18-55mm f4 is STM Lens (Black)</p>
+        <img src = "./images/Canon.jpg" class = "w-100 product-img">
+        <p class = "text-capitalize my-1">Canon EOS</p>
         <br>  
-        <span class = "fw-bold">Deal of the Day:	₹56,490.00</span>
+        <span class = "fw-bold product-price">₹56490.00</span>
         <br>
         <span class = "fw">You Save:	₹3,505.00 (6%)</span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+
       </div>
     </div>
   </div>
@@ -240,5 +283,8 @@
     </div>
     </div>
   </div>
+</section>
+<!-- link to js -->
+<script src="main.js"></script>
 </body>
 </html>

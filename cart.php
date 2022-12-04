@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" href="cart.css" type="text/css">
+	<link rel="stylesheet" href="index.css" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -12,11 +13,8 @@
         .table tbody td{
         vertical-align: middle;
         }
-        .btn-incre, .btn-decre{
-        box-shadow: none;
-        font-size: 25px;
-        }
         </style>
+		<script type="text/javascript" src="index.js"></script>
 </head>
 <body>
 
@@ -51,8 +49,9 @@
 			  <!-- Navbar ends-->
 	<!-- cart starts -->
     <div class="container my-3">
-		<h1 style="text-align: center;">This is Cart</h1>
-		<div class="d-flex py-3"><h3>Total Price:  0 $</h3> <a class="mx-3 btn btn-primary" href="cart-check-out">Check Out</a></div>
+		<h1 class="cart-title" style="text-align: center;">Cart</h1>
+		<div class="d-flex py-3"><h3 class="Total-title">Total Price    </h3> <a class="mx-3 btn btn-primary" href="cart-check-out">Check Out</a></div>
+		<h3 class="Total-price">0 $</h3>
 		<table class="table table-light">
 			<thead>
 				<tr>
@@ -63,24 +62,36 @@
 					<th class="cart_tit" scope="col">Cancel</th>
 				</tr>
 			</thead>
-			<tbody>
-				<tr>
-					<td >Apple iPhone 14 Pro 1TB Deep Purple</td>
+			<tbody class="cart-content">
+				<tr class="cart-box">
+					<th >Apple iPhone 14 Pro 1TB Deep Purple</th>
+					<th >Electronic</th>
+					<th >₹1,79,900.00</th>
+					<th>
+					<input type="number" name="quantity" class="card-quantity" value="1" placeholder="Quantity" > 
+					</th>
+					<th><a  class="cart-box">Remove</a></th>
+				</tr>
+				
+				<!-- <tr class="cart-box">
+					<td class="">Apple iPhone 14 Pro 1TB Deep Purple</td>
 					<td >Electronic</td>
 					<td >₹1,79,900.00</td>
 					<td>
-						<form action="order-now" method="post" class="form-inline">
-						<input type="hidden" name="id" value="" class="form-input">
-							<div class="form-group d-flex justify-content-between">
-								<!-- <a class="btn bnt-sm btn-incre" ><i style="padding-top: 5%;" class="fa fa-plus" style="font-size:10px"></i></a> -->
-								<input type="number" name="quantity" class="card-quantity" value="1" placeholder="Quantity" > 
-								<!-- <a class="btn bnt-sm btn-incre" ><i style="padding-top: 5%;" class="fa fa-minus" style="font-size:10px;"></i></a> -->
-							</div>
-							<!-- <button type="submit" class="btn btn-primary btn-sm">Buy</button> -->
-						</form>
+					<input type="number" name="quantity" class="card-quantity" value="1" placeholder="Quantity" > 
 					</td>
-					<td><a  onclick="" class="btn btn-sm btn-danger">Remove</a></td>
+					<td><a  class=" cart-remove">Remove</a></td>
 				</tr>
+
+				<tr class="cart-box">
+					<td class="">Apple iPhone 14 Pro 1TB Deep Purple</td>
+					<td >Electronic</td>
+					<td >₹1,79,900.00</td>
+					<td>
+					<input type="number" name="quantity" class="card-quantity" value="1" placeholder="Quantity" > 
+					</td>
+					<td><a  class=" cart-remove">Remove</a></td>
+				</tr> -->
 			</tbody>
 		</table>
 	</div>
