@@ -66,9 +66,6 @@ if(isset($_POST['submit'])){
 					<a class="nav-link active" aria-current="page" href="index.php">Popular</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="cart.php">Cart</a>
-				  </li>
-				  <li class="nav-item">
 					<a class="nav-link active" aria-current="page" href="login_form.php">Login</a>
 				  </li>
 				</ul>

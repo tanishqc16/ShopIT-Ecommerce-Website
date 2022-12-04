@@ -67,7 +67,7 @@
     <!-- Welcome screen -->
     <div class="intro_area">
         <div>
-            <img src="./images/svgimg (2).svg" style="height: 600px; width: 700px; padding-left: 100px;" alt="">
+            <img class= "ill_img" src="./images/svgimg (2).svg" alt="">
         </div>
         <div class="quotetxt">
             <li>Innovation for</li>
